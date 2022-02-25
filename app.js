@@ -2,8 +2,6 @@ const shop_list = document.querySelector('.shop-list');
 const single_modal = document.querySelector('.single-modal');
 
 fetch('https://fakestoreapi.com/products').then(data => data.json()).then(data => {
-
-    shop_list.innerHTML = '';
     data.map((product) => {
         shop_list.innerHTML += `
                 <div class="col-xl-3">
